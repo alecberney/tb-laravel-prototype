@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Api\FruitController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +19,17 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('fruits', FruitController::class);//->middleware('can:update,post'); // policies via middleware 
+
+// to read json request
+/*Route::post('/request', function () {
+    $payLoad = json_decode(request()->getContent(), true);
+
+    dd($payLoad['name']);
+});
+Route::get('/primitive', function () {
+    $payLoad = json_decode(request()->get('payload'));
+
+    dd($payLoad);
+});*/

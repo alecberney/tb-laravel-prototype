@@ -15,5 +15,13 @@ class FruitResource extends JsonResource
     public function toArray($request)
     {
         return parent::toArray($request);
+
+        // with collection and need to add link to resource
+        /*return [
+            'data' => $this->collection,
+            'links' => [
+                'self' => 'link-value',
+            ],
+        ];*/
     }
 }
