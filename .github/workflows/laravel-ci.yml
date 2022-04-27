@@ -44,7 +44,6 @@ jobs:
       
     - name: Run laravel database migrations
       env:
-        DB_CONNECTION: localhost
         MYSQL_DATABASE: test_db
         DB_USERNAME: user
         DB_PASSWORD: secret
