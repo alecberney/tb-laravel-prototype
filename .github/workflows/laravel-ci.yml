@@ -45,7 +45,10 @@ jobs:
     - name: Run laravel database migrations
       env:
         DB_CONNECTION: localhost
-        DB_DATABASE: test_db
+        MYSQL_DATABASE: test_db
+        DB_USERNAME: user
+        DB_PASSWORD: secret
+        DB_PORT: ${{ job.services.mysql.ports[3306] }}
       run: php artisan migrate --force
 
     - name: Directory Permissions
