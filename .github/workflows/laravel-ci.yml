@@ -41,6 +41,9 @@ jobs:
 
     - name: Generate key
       run: php artisan key:generate
+      
+    - name: Migrate models
+      run: php artisan migrate
 
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
