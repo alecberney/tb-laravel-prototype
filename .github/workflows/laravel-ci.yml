@@ -5,6 +5,9 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   laravel-tests:
@@ -60,4 +63,4 @@ jobs:
         DB_USERNAME: user
         DB_PASSWORD: secret
         DB_PORT: ${{ job.services.mysql.ports[3306] }}
-      run: vendor/bin/phpunit
+      run: vendor/bin/phpunit --coverage
