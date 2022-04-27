@@ -30,5 +30,21 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 default developement server in on port 80
 
 ### Migration
+````
 ./vendor/bin/sail artisan migrate
+````
+
+## Tests
+````
+./vendor/bin/phpunit
+````
+ou
+````
+./vendor/bin/sail artisan test
+````
+
+### Test coverage
+````
+./vendor/bin/sail artisan test --coverage
+````
 
