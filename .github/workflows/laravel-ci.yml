@@ -15,7 +15,7 @@ jobs:
       mysql:
         image: mysql:latest
         env:
-          MYSQL_DATABASE: test_db
+          MYSQL_DATABASE: tb_laravel_prototype
           MYSQL_USER: user
           MYSQL_PASSWORD: secret
           MYSQL_ROOT_PASSWORD: secretroot
